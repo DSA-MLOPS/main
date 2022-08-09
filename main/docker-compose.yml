@@ -1,0 +1,98 @@
+services:
+  elasticsearch:
+    container_name: es-container
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.3.3
+    environment:
+      - xpack.security.enabled=false
+      - "discovery.type=single-node"
+    networks:
+      - dsa-net
+    ports:
+      - 9200:9200
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+
+  kibana:
+    container_name: kb-container
+    image: docker.elastic.co/kibana/kibana:8.3.3
+    environment:
+      - ELASTICSEARCH_HOSTS=http://es-container:9200
+    networks:
+      - dsa-net
+    depends_on:
+      - elasticsearch
+    ports:
+      - 5601:5601
+
+  emb_model_serv:
+    container_name: emb-model-serv-container
+    image: docker.io/hunkim/emb_model_serv
+    networks:
+      - dsa-net
+    ports:
+      - 8888:8888
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8888/docs" ]
+      interval: 10s
+      timeout: 2s
+      retries: 1000
+      start_period: 60s
+
+  es_index:
+    container_name: es-index-container
+    image: docker.io/hunkim/es_index
+    networks:
+      - dsa-net
+    ports:
+      - 8889:8889
+    environment:
+      - EMB_API_URL=http://emb-model-serv-container:8888/encode
+      - ELASTIC_URL=http://es-container:9200
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8889/docs" ]
+      interval: 10s
+      timeout: 2s
+      retries: 1000
+      start_period: 10s
+    depends_on:
+      emb_model_serv:
+        condition: service_healthy
+
+  crawl_index:
+    container_name: crawl-index-container
+    image: docker.io/hunkim/crawl_index
+    networks:
+      - dsa-net
+    environment:
+      - INDEX_API_URL=http://es-index-container:8889
+    depends_on:
+      es_index:
+        condition: service_healthy
+
+  es_search:
+    container_name: es-search-container
+    image: docker.io/hunkim/es_search
+    networks:
+      - dsa-net
+    ports:
+      - 8890:8890
+    environment:
+      - EMB_API_URL=http://emb-model-serv-container:8888/encode
+      - ELASTIC_URL=http://es-container:9200
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:8890/" ]
+      interval: 10s
+      timeout: 2s
+      retries: 1000
+      start_period: 10s
+    depends_on:
+      emb_model_serv:
+        condition: service_healthy
+
+networks:
+  dsa-net:
+    driver: bridge
+
+volumes:
+  es-data:
+    driver: local
