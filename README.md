@@ -1,8 +1,9 @@
 # main
 
+## System/Docker overview
 <img width="758" alt="image" src="https://user-images.githubusercontent.com/901975/183826557-3dd15735-865c-4db2-abcd-9d66caba2473.png">
 
-Lectures topics (Tentative)
+## Lectures topics (Tentative)
 1. MLOps overview, system overview
 1. Elastic search 101: Elastic search expert
 1. Filebeat + Kibana: Kibana expert
