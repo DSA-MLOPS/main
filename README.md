@@ -13,5 +13,5 @@
 1. Hugging face: Hugging face developers
 1. Google clud infra (training/serving)
 1. Streamlit + FastAPI
-1. Docker, k8, KFlow, performance evaluation
+1. Docker, k8, KFlow, KServe, Airflow, performance evaluation
 1. Continual learning pipeline (logging, kibana, retraining, etc.) 
