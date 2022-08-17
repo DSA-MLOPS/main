@@ -7,12 +7,12 @@
 1. (Sep 9, No class, Happy holidays!)
 1. Sep 16, MLOps overview, system overview
 1. Sep 23, Elastic search 101: Elastic search expert
-1. Sep 30, Transformers 101: Training Transformer Transformer experts in the industry (Naver/Line, etc.)
+1. Sep 30, Transformers 101: Training Transformer Transformer experts in the industry
 1. (Oct 7, No Class, Chinese National Day)
-1. Oct 14, Filebeat + Kibana: Kibana expert
+1. Oct 14, Filebeat + Kibana: Kibana expert (Jong Min)
 1. Oct 21, AWS + Sagemaker 101: AWS expert
   https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
-1. Oct 28, Hugging face: Hugging face developers
+1. Oct 28, Hugging face (TBA)
 1. Nov 4, Google clud infra (training/serving)
 1. Nov 11, Streamlit + FastAPI
 1. Nov 18, Docker, k8, KFlow, KServe, Airflow, performance evaluation
