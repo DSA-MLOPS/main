@@ -5,6 +5,7 @@
 
 ## Lectures topics (Tentative)
 1. (Sep 9, No class, Happy holidays!)
+   - https://www.youtube.com/watch?v=7bA0gTroJjw&ab_channel=NetworkChuck
 1. Sep 16, MLOps overview, system overview
 1. Sep 23, Elastic search 101: Elastic search expert
 1. Sep 30, Transformers 101: Training Transformer Transformer experts in the industry
