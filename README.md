@@ -10,6 +10,7 @@
  - K8S: https://www.youtube.com/watch?v=7bA0gTroJjw&ab_channel=NetworkChuck
  - https://docker-curriculum.com/#menu
  - https://www.eksworkshop.com/
+ - https://medium.com/geekculture/from-apple-silicon-to-heroku-docker-registry-without-swearing-36a2f59b30a3  
 1. Sep 16, MLOps overview, system overview
 1. Sep 23, Elastic search 101: Elastic search expert
 1. Sep 30, Transformers 101: Training Transformer Transformer experts in the industry
