@@ -3,6 +3,11 @@
 ## System/Docker overview
 <img width="758" alt="image" src="https://user-images.githubusercontent.com/901975/183826557-3dd15735-865c-4db2-abcd-9d66caba2473.png">
 
+### Indexing
+```
+kubectl exec --stdin --tty crawl-index-... -- /bin/bash
+python main.py JE_m2UgAAAAJ
+```
 ## Lectures topics (Tentative)
 1. (Sep 9, No class, Happy holidays!)
  - Docker1: https://www.youtube.com/watch?v=eGz9DS-aIeY&ab_channel=NetworkChuck
