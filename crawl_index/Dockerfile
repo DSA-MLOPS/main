@@ -8,6 +8,7 @@ RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 # 
 COPY ./*.py /code/
+COPY ./*.sh /code/
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
 
