@@ -3,11 +3,43 @@
 ## System/Docker overview
 <img width="758" alt="image" src="https://user-images.githubusercontent.com/901975/183826557-3dd15735-865c-4db2-abcd-9d66caba2473.png">
 
-### Indexing
+### Docker preperation
+For each directory: crawl_index, es_index, es_search, model_serv do `make build push`
+
+### Docker Compose
+```
+cd main
+make up 
+```
+
+#### Crawl & Index
+```
+docker exec -it crawl-index-container /bin/bash
+# crawl.sh  
+```
+
+#### Search test
+http://localhost:8890
+
+### Kubernates
+```
+minikube start
+cd main
+make kup
+```
+#### Crawl & Index
 ```
 kubectl exec --stdin --tty crawl-index-... -- /bin/bash
-python main.py JE_m2UgAAAAJ
+# crawl.sh
 ```
+
+#### Search test
+```
+kubectl port-forward --address 0.0.0.0 services/es-search 9977:8890
+```
+
+http://localhost:9977
+
 ## Lectures topics (Tentative)
 1. (Sep 9, No class, Happy holidays!)
  - Docker1: https://www.youtube.com/watch?v=eGz9DS-aIeY&ab_channel=NetworkChuck
