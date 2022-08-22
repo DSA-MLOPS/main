@@ -13,22 +13,22 @@ rm:
 kup:
 	echo "Deploying to minikube"
 	kubectl apply -f dsa-net-networkpolicy.yaml 
-	#kubectl apply -f elasticsearch-deployment.yaml 
-	#kubectl apply -f kibana-deployment.yaml 
+	kubectl apply -f elasticsearch-deployment.yaml 
+	kubectl apply -f kibana-deployment.yaml 
 	kubectl apply -f emb-model-serv-deployment.yaml 
-	#kubectl apply -f emb-dep.yaml 
 	kubectl apply -f es-index-deployment.yaml 
 	kubectl apply -f es-search-deployment.yaml 
 	kubectl apply -f crawl-index-deployment.yaml
 	
 	echo "URL for the service"
 	minikube service es-search --url
+	kubectl port-forward --address 0.0.0.0 services/es-search 9977:8890
 
 kdown:
 	echo "Deleting from minikube"
 	kubectl delete -f dsa-net-networkpolicy.yaml 
-	#kubectl delete -f elasticsearch-deployment.yaml 
-	#kubectl delete -f kibana-deployment.yaml 
+	kubectl delete -f elasticsearch-deployment.yaml 
+	kubectl delete -f kibana-deployment.yaml 
 	kubectl delete -f emb-model-serv-deployment.yaml 
 	kubectl delete -f es-index-deployment.yaml 
 	kubectl delete -f es-search-deployment.yaml

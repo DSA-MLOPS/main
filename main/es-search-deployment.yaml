@@ -38,8 +38,9 @@ metadata:
     io.kompose.service: es-search
   name: es-search
 spec:
+  type: NodePort
   ports:
-    - name: "8890"
+    - name: strealmit
       port: 8890
       targetPort: 8890
   selector:

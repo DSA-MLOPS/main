@@ -20,7 +20,7 @@ spec:
       containers:
         - env:
             - name: ELASTIC_URL
-              value: http://localhost:9200
+              value: http://elasticsearch:9200
             - name: EMB_API_URL
               value: http://emb-model-serv:8888/encode
           image: docker.io/hunkim/es_index
