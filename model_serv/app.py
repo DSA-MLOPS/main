@@ -14,7 +14,6 @@ from sentence_transformers import SentenceTransformer
 #model = SentenceTransformer("upstage/simcse-nli-sbert-sts-klue-roberta-base", use_auth_token=True)
 model = SentenceTransformer("hunkim/sentence-transformer-klue")
 
-
 @app.post("/encode")
 async def encode(request: Request):
     body = await request.body()
@@ -26,5 +25,5 @@ async def encode(request: Request):
 if __name__ == "__main__":
     # uvicorn app:app --reload
     # python -m uvicorn app:app --reload --port 8082
-    payload = ["안녕 하세요?"]   
+    payload = ["Hello, world!", "I am a sentence"]
     print(model.encode(payload))

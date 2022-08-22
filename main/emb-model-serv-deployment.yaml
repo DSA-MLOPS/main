@@ -1,0 +1,43 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: emb-model-serv
+  name: emb-model-serv
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      io.kompose.service: emb-model-serv
+  template:
+    metadata:
+      labels:
+        io.kompose.network/dsa-net: "true"
+        io.kompose.service: emb-model-serv
+    spec:
+      containers:
+        - image: docker.io/hunkim/emb_model_serv
+          name: emb-model-serv
+          ports:
+            - containerPort: 8888
+          resources: {}
+      restartPolicy: Always
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: emb-model-serv
+  name: emb-model-serv
+spec:
+  ports:
+    - name: "8888"
+      port: 8888
+      targetPort: 8888
+  selector:
+    io.kompose.service: emb-model-serv
+status:
+  loadBalancer: {}
+

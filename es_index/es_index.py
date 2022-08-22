@@ -13,7 +13,7 @@ pp = pprint.PrettyPrinter(indent=2)
 
 MAX_SEQ_LENGTH = 510
 
-# ELASTIC_PASSWORD = os.environ["ELASTIC_PASSWORD"]
+ELASTIC_PASSWORD = os.getenv("ELASTIC_PASSWORD")
 # ELASTIC_CA_CERTS = os.environ["ELASTIC_CA_CERTS"]
 # ELASTIC_CA_CERTS = os.environ["ELASTIC_CA_CERTS"]
 
@@ -32,11 +32,19 @@ log = logging.getLogger(__name__)
 # https://colab.research.google.com/github/JohnSnowLabs/spark-nlp-workshop/blob/master/tutorials/Certification_Trainings/Public/9.SentenceDetectorDL.ipynb#scrollTo=euCxCFU-Erpv
 import spacy
 spacy_nlp = spacy.load("en_core_web_sm")
+es = None
 
-es = Elasticsearch(
-    ELASTIC_URL,
-)
-
+if ELASTIC_PASSWORD:
+    print(f"ELASTIC_URL: {ELASTIC_URL} ELASTIC_PASSWORD: {ELASTIC_PASSWORD}")
+    es = Elasticsearch(
+        ELASTIC_URL,
+        http_auth=("elastic", ELASTIC_PASSWORD),
+        # ca_certs=ELASTIC_CA_CERTS,
+    )
+else:
+    es = Elasticsearch(
+        ELASTIC_URL,
+    )
 
 def _encode(strList):
     sentences = {"sentences": strList}

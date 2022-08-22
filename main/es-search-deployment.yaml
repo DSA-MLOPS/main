@@ -1,0 +1,48 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: es-search
+  name: es-search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: es-search
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.network/dsa-net: "true"
+        io.kompose.service: es-search
+    spec:
+      containers:
+        - env:
+            - name: ELASTIC_URL
+              value: http://elasticsearch:9200
+            - name: EMB_API_URL
+              value: http://emb-model-serv:8888/encode
+          image: docker.io/hunkim/es_search
+          name: es-search-container
+          ports:
+            - containerPort: 8890
+          resources: {}
+      restartPolicy: Always
+status: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    io.kompose.service: es-search
+  name: es-search
+spec:
+  ports:
+    - name: "8890"
+      port: 8890
+      targetPort: 8890
+  selector:
+    io.kompose.service: es-search
+status:
+  loadBalancer: {}
