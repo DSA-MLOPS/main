@@ -58,7 +58,7 @@ http://localhost:9977
   - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
 1. Oct 28, Hugging face (TBA)
 1. Nov 4, Google clud infra (training/serving)
-1. Nov 11, Streamlit + FastAPI
+1. Nov 11, AWS (YJ Jeong) Streamlit + FastAPI
 1. Nov 18, Docker, k8, KFlow, KServe, Airflow, performance evaluation
 1. Nov 25, Continual learning pipeline (logging, kibana, retraining, etc.) 
 1. Dec 2, Final project presenations
