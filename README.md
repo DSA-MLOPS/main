@@ -52,6 +52,7 @@ http://localhost:9977
 3. Sep 23, Elastic search 101: Elastic search expert
 4. Sep 30,  Streamlit + FastAPI
     - Book: Building Python Web APIs with FastAPI By Abdulazeez Abdulazeez Adeshina
+    - Book: Web Application Development with Streamlit: Develop and Deploy Secure and Scalable Web Applications to the Cloud Using a Pure Python Framework By Mohammad Khorasani, Mohamed Abdou, Javier Hernández Fernández
 5. (Oct 7, No Class, Chinese National Day)
 6. Oct 14, Filebeat + Kibana: Kibana expert (Jong Min)
 7. Oct 21, Transformers 101: Training Transformer Transformer experts in the industry
