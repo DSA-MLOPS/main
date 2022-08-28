@@ -48,7 +48,7 @@ http://localhost:9977
     - https://docker-curriculum.com/#menu
     - https://www.eksworkshop.com/
     - https://medium.com/geekculture/from-apple-silicon-to-heroku-docker-registry-without-swearing-36a2f59b30a3  
-1. Sep 16, MLOps overview, system overview
+1. Sep 16, MLOps overview, demo system (docker, kubernates) overview
 1. Sep 23, Elastic search 101: Elastic search expert
 1. Sep 30,  Streamlit + FastAPI
 1. (Oct 7, No Class, Chinese National Day)
