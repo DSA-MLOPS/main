@@ -55,7 +55,7 @@ http://localhost:9977
     - Book: Web Application Development with Streamlit: Develop and Deploy Secure and Scalable Web Applications to the Cloud Using a Pure Python Framework By Mohammad Khorasani, Mohamed Abdou, Javier Hernández Fernández
 5. (Oct 7, No Class, Chinese National Day)
 6. Oct 14, Filebeat + Kibana: Kibana expert (Jong Min)
-7. Oct 21, Transformers 101: Training Transformer Transformer experts in the industry
+7. Oct 21, Large-scale transformer models (Kevin Ko, TUNiB)
 8. Oct 28, Hugging face (TBA)
 9. Nov 4, Google clud infra (training/serving)
 10. Nov 11, AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
