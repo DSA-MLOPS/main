@@ -57,10 +57,10 @@ http://localhost:9977
 6. (3/3) Filebeat + Kibana: Kibana expert (Jong Min)
 7. (3/10)Large-scale transformer models (Kevin Ko, TUNiB)
 8. (3/17) Hugging face (TBA)
-9. (3/24) Google clud infra (training/serving)
-10. (3/31) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
+10. (3/24) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
     - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
+9. (3/31) Google clud infra (training/serving)
 11. (4/7) No class
 11. (4/14) Docker, k8, KFlow, KServe, Airflow, performance evaluation
 12. (4/21) Continual learning pipeline (logging, kibana, retraining, etc.) 
