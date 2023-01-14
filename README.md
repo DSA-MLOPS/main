@@ -49,11 +49,11 @@ http://localhost:9977
     - https://www.eksworkshop.com/
     - https://medium.com/geekculture/from-apple-silicon-to-heroku-docker-registry-without-swearing-36a2f59b30a3  
 1. (2/10) MLOps overview, demo system (docker, kubernates) overview
-3. (2/17) Elastic search 101: Elastic search expert
-4. (2/24)Streamlit + FastAPI
+1. (2/17)Streamlit + FastAPI
     - Tutorial: https://streamlitpython.com/ 
     - Book: Building Python Web APIs with FastAPI By Abdulazeez Abdulazeez Adeshina
     - Book: Web Application Development with Streamlit: Develop and Deploy Secure and Scalable Web Applications to the Cloud Using a Pure Python Framework By Mohammad Khorasani, Mohamed Abdou, Javier Hernández Fernández
+3. (2/24) Elastic search 101: Elastic search expert (Jong Min)
 6. (3/3) Filebeat + Kibana: Kibana expert (Jong Min)
 7. (3/10)Large-scale transformer models (Kevin Ko, TUNiB)
 8. (3/17) Hugging face (TBA)
