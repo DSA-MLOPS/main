@@ -60,7 +60,7 @@ http://localhost:9977
 10. (3/24) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
     - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
-9. (3/31) Google clud infra training/serving (Chansung Park/Sayak Paul)
+9. (3/31) Google cloud infra training/serving (Chansung Park/Sayak Paul)
 11. (4/7) No class
 11. (4/14) Docker, k8, KFlow, KServe, Airflow, performance evaluation (HW)
 12. (4/21) Continual learning pipeline (logging, kibana, retraining, etc.) 
