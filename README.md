@@ -40,7 +40,7 @@ kubectl port-forward --address 0.0.0.0 services/es-search 9977:8890
 
 http://localhost:9977
 
-## Lectures topics Friday 2:30PM-4PM HKT (Tentative)
+## Lectures topics Friday 1:30PM-4PM HKT (Tentative)
 1. (2/10)
     - Docker1: https://www.youtube.com/watch?v=eGz9DS-aIeY&ab_channel=NetworkChuck
     - Docker2 (long): https://www.youtube.com/watch?v=3c-iBn73dDE&ab_channel=TechWorldwithNana
