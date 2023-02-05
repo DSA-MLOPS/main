@@ -40,7 +40,7 @@ kubectl port-forward --address 0.0.0.0 services/es-search 9977:8890
 
 http://localhost:9977
 
-## Lectures topics Friday 2:30PM-4PM (Tentative)
+## Lectures topics Friday 2:30PM-4PM HKT (Tentative)
 1. (2/10)
     - Docker1: https://www.youtube.com/watch?v=eGz9DS-aIeY&ab_channel=NetworkChuck
     - Docker2 (long): https://www.youtube.com/watch?v=3c-iBn73dDE&ab_channel=TechWorldwithNana
@@ -56,13 +56,13 @@ http://localhost:9977
 3. (2/24) Elastic search 101: Elastic search expert (Jong Min)
 6. (3/3) Filebeat + Kibana: Kibana expert (Jong Min)
 7. (3/10)Large-scale transformer models (Kevin Ko, TUNiB)
-8. (3/17) Hugging face (TBA)
+8. (3/17) Hugging face (Sayak Paul, Hugging Face)
 10. (3/24) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
     - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
-9. (3/31) Google clud infra (training/serving)
+9. (3/31) Google clud infra training/serving (Chansung Park/Sayak Paul)
 11. (4/7) No class
-11. (4/14) Docker, k8, KFlow, KServe, Airflow, performance evaluation
+11. (4/14) Docker, k8, KFlow, KServe, Airflow, performance evaluation (HW)
 12. (4/21) Continual learning pipeline (logging, kibana, retraining, etc.) 
 13. (4/28) Final project presenations 1
 13. (5/12) Final project presenations 2 (optional)
