@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time clock example</title>
+</head>
+<body>
+    <h1>Real-time clock</h1>
+    <p>The current time is: <span id="time"></span></p>
+    <script>
+        function connectWebSocket() {
+            var ws = new WebSocket("ws://localhost:8001/ws");
+            ws.onmessage = function(event) {
+                var now = event.data;
+                document.getElementById("time").textContent = now;
+            };
+        }
+
+        connectWebSocket();
+    </script>
+</body>
+</html>

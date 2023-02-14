@@ -1,1 +1,3 @@
 .ssvenv
+.venv
+__pycache__

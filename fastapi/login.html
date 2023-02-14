@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Page</title>
+</head>
+
+<body>
+  <h1>Secure Page</h1>
+  <div id="message"></div>
+  <script>
+    const token = localStorage.getItem("token");
+    if (token) {
+      fetch("http://localhost:8002/secure", {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      })
+        .then(response => {
+          if (response.status === 200) {
+            return response.json();
+          } else {
+            return null;
+          }
+        })
+        .then(data => {
+          const message = `Hello, ${data.message}!`;
+          const messageElement = document.createElement("p");
+          messageElement.innerText = message;
+          document.getElementById("message").appendChild(messageElement);
+        })
+        .catch(error => {
+          console.error(error);
+          showLoginForm();
+        });
+    } else {
+      showLoginForm();
+    }
+
+    function logout() {
+      localStorage.removeItem("token");
+      window.location.reload();
+    }
+
+    function showLoginForm() {
+      const form = document.createElement("form");
+      form.innerHTML = `
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+      `;
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const username = form.elements.username.value;
+        const password = form.elements.password.value;
+        const response = await fetch("http://localhost:8002/login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            "username": username,
+            "password": password
+          })
+        });
+        const data = await response.json();
+        localStorage.setItem("token", data.access_token);
+        window.location.reload();
+      });
+      document.body.appendChild(form);
+    }
+  </script>
+
+<a href="#" onclick="logout()">Log Out</a>
+
+</body>
+
+</html>
