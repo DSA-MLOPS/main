@@ -3,3 +3,4 @@ uvicorn
 requests
 uvicorn[standard]
 PyJWT
+streamlit

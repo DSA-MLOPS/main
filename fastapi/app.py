@@ -26,3 +26,5 @@ async def stream_data():
 @app.get("/stream")
 async def stream():
     return StreamingResponse(stream_data(), media_type="text/event-stream")
+
+
