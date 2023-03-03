@@ -58,6 +58,7 @@ http://localhost:9977
 7. (3/10)Large-scale transformer models (Kevin Ko, TUNiB)
 8. (3/17) Hugging face (Sayak Paul, Hugging Face)
 10. (3/24) Larage Language Model (Chatgpt) actions at MS
+   - Project proposal (5 min talk)
 9. (3/31) Google cloud infra training/serving (Chansung Park/Sayak Paul)
 11. (4/7) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
