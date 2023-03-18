@@ -56,10 +56,10 @@ http://localhost:9977
 3. (2/24) Elastic search 101: Elastic search expert (Jong Min)
 6. (3/3) Filebeat + Kibana: Kibana expert (Jong Min)
 7. (3/10)Large-scale transformer models (Kevin Ko, TUNiB)
-8. (3/17) Hugging face (Sayak Paul, Hugging Face)
+8. (3/17) Project introduction
 10. (3/24) Larage Language Model (Chatgpt) actions at MS
    - Project proposal (5 min talk)
-9. (3/31) Google cloud infra training/serving (Chansung Park/Sayak Paul)
+9. (3/31) Google cloud infra training/serving (Chansung Park/Sayak Paul), Hugging face (Sayak Paul, Hugging Face)
 11. (4/7) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
     - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
