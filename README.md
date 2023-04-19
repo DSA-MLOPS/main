@@ -63,9 +63,9 @@ http://localhost:9977
 11. (4/7) AWS cloud infra (serving, ECS)(YJ Jeong from AWS)
     - https://sagemaker-workshop.com/
     - https://aws.amazon.com/blogs/machine-learning/host-hugging-face-transformer-models-using-amazon-sagemaker-serverless-inference/ 
-11. (4/14) LLM1
+11. (4/14) LLM1: Alpaca
 12. (4/21) No class -- Please work on project
-13. (4/28) LLM2: LLaMa 
-13. (5/5) Final project presenations
+13. (4/28) Last Lecture: LLM2: LLaMa 
+13. (5/12) Final project presenations
 
 
