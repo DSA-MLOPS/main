@@ -66,6 +66,6 @@ http://localhost:9977
 11. (4/14) LLM1: Alpaca
 12. (4/21) No class -- Please work on project
 13. (4/28) Last Lecture: LLM2: LLaMa 
-13. (5/12) Final project presenations
+13. (5/5) Final project presenations
 
 
